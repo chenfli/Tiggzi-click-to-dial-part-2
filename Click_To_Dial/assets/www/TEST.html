@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="res/lib/detectmobilebrowser.js">
+        </script>
+        <script type="text/javascript">
+         var screen_mobile = true;
+ var screen_width = 320;
+ var screen_height = 480;
+ var browser_mobile = is_mobile_browser();
+
+ if (screen_mobile && !browser_mobile && top == window)
+ {
+     var h = top.location.hash;
+     var s = top.location.search;
+     top.location.href = './mob-TEST.html' + h + s;
+ }
+        </script>
+        <title>
+            TEST
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/themes/dark-gray/dark-gray.css" rel="stylesheet" />
+        <link href="res/lib/jquerymobile/1.1.0/jquery.mobile.structure-1.1.0.css" rel="stylesheet"
+        />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.6.4.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/jquery.mobile.iepatch.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.1.0/jquery.mobile-1.1.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/invokeAccessTokenApi.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/xmlWriter.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/makeCallWriter.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="TEST" id="j_25" class="type-interior"
+        data-theme='a'>
+            <div data-role="header" data-position='fixed' data-theme='a' name="mobileheader2"
+            id="j_27" class='mobileheader3'>
+                <h1 dsid="mobileheader2">
+                    Caption
+                </h1>
+            </div>
+            <div data-role="content" id="j_28" name="mobilecontainer2" class="mobilecontainer3"
+            dsid="mobilecontainer2" data-theme='a'>
+                <link href="TEST.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="TEST.js">
+                </script>
+                <div name="theDIV" dsid="theDIV" id="j_29" class="mobilepanel1">
+                </div>
+            </div>
+            <div data-role="footer" class="mobilefooter3" data-position="fixed" id="j_30" data-theme='a'>
+            </div>
+        </div>
+    </body>
+
+</html>

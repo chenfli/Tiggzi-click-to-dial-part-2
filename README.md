@@ -13,9 +13,13 @@ There are 2 screens:
  called from (https://github.com/chenfli/Tiggzi-click-to-dial-part-1/blob/master/Click_To_Dial/assets/www/mobilescreen2.html)
 2. mobilescreen1.html - not part of the flow, but can come in use when the 1st part (Facebook integration) doesn't work.
 
-The live demo can be found under
+The full live demo can be found under
 
 http://tiggzi.com/view/25c969c6-3c0e-4ee1-a09e-54a7a042b19f/mob-mobilescreen1.html
+
+To test only this part use
+
+http://www.tiggzi.com/view/3f6ca50e-c260-471f-a6cc-70c890c24f24/mob-mobilescreen1.html
 
 The screens layout can be found under
 
@@ -41,10 +45,12 @@ makeCallWriter.js - responsible to generate both XML and request headers for mak
 
 The flow goes like this:
 
+Tiggzi-click-to-dial-part-1 --with 2 phones--> Foundry Login Page + Approval for Amit Application --redirect with phones--> Result.html 
 
-
-
-
+1. Recieve Auth Token
+2. Send request for Access Token
+3. Recieve Access Token
+4. Send request to use Make Call Nasb API.
 
 
 NOTE: If you test it on a browser you must remove your security checks, since 
@@ -56,3 +62,4 @@ validate that chrome process doesn't run on backgroud/foreground and than:
 
 C:\Users\[your user name]\AppData\Local\Google\Chrome\Application\chrome.exe --disable-web-security
 
+LOG POINT: To see the flow better enable the logs on chrome Ctrl+Shift+I.
